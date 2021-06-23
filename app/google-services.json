@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "998966457159",
+    "firebase_url": "https://evensia-default-rtdb.firebaseio.com",
+    "project_id": "evensia",
+    "storage_bucket": "evensia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998966457159:android:599b8943c2cf841774d262",
+        "android_client_info": {
+          "package_name": "com.example.evensia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998966457159-fdccrt9dn4u4l4jg1muj2cdhsfm6kuut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX6tkZ6XoAFo5fyLOdxHN2oDSLTpxEtAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998966457159-fdccrt9dn4u4l4jg1muj2cdhsfm6kuut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

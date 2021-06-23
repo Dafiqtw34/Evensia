@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9E9E9"
+    tools:context=".Search_Gedung">
+
+    <RelativeLayout
+        android:id="@+id/backG"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#272643">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gedung"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:layout_toRightOf="@+id/back"
+            android:padding="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/form"
+        android:layout_below="@+id/backG"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:background="@drawable/form"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/cari"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search"
+            android:text="Cari Gedung disini..."
+            android:textSize="12sp"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:paddingStart="15dp" />
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:id="@+id/tgl"
+            android:layout_below="@+id/cari"
+            android:background="@drawable/search"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/TglBO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Booking"
+                android:textSize="14sp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/hari"
+                android:layout_below="@+id/TglBO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Senin, 27/01/2020"
+                android:textSize="12sp"
+                android:layout_marginLeft="12dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="-54dp"
+                android:layout_marginBottom="11dp"
+                android:layout_toEndOf="@+id/hari"
+                android:src="@drawable/calender" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/filter"
+            android:layout_below="@+id/tgl"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search"
+            android:text="Cari Gedung disini..."
+            android:drawableEnd="@drawable/ic_baseline_search_24"
+            android:paddingStart="10dp"/>
+
+        <Button
+            android:layout_below="@+id/filter"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/indor"/>
+
+        <Button
+            android:id="@+id/In"
+            android:layout_below="@+id/filter"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/indor"/>
+        
+        <Button
+            android:layout_below="@+id/In"
+            android:layout_marginTop="20dp"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button"
+            android:text="Cari"
+            android:textColor="#fff"/>
+
+    </RelativeLayout>
+</RelativeLayout>

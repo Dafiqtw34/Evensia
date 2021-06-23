@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".otp"
+    android:background="#2C698D">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/kotak" />
+
+    <TextView
+        android:id="@+id/En"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Enter your"
+        android:textSize="24sp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/Ver"
+        android:layout_below="@+id/En"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="verification code"
+        android:textSize="24sp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+    android:id="@+id/Enter"
+    android:layout_below="@+id/Ver"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:text="Enter the code we sent via SMS to your"
+    android:textSize="18sp"
+    android:textColor="#fff"
+    android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/regs"
+        android:layout_below="@+id/Enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="registered phone number"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"/>
+
+
+
+</RelativeLayout>
