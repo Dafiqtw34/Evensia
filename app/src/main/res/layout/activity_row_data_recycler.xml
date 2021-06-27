@@ -7,11 +7,12 @@
     tools:context=".gedung.row_data_recycler">
 
     <RelativeLayout
+        android:id="@+id/parent"
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/form">
 
@@ -57,18 +58,18 @@
 
         <HorizontalScrollView
             android:id="@+id/gambar"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_below="@+id/nilai"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:scrollbars="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/gambar1"
@@ -115,6 +116,19 @@
             android:textColor="@color/Gray"
             android:textSize="12sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/harga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gambar"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
 
     </RelativeLayout>
 

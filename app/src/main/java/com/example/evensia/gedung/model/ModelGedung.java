@@ -1,14 +1,15 @@
 package com.example.evensia.gedung.model;
 
 public class ModelGedung {
-    private String alamat, isi, judul, nilai, gambar1, gambar2, gambar3, gambar4;
+    private String alamat, harga, isi, judul, nilai, gambar1, gambar2, gambar3, gambar4;
 
     public ModelGedung() {
 
     }
 
-    public ModelGedung(String alamat, String isi, String judul, String nilai, String gambar1, String gambar2, String gambar3, String gambar4) {
+    public ModelGedung(String alamat,String harga, String isi, String judul, String nilai, String gambar1, String gambar2, String gambar3, String gambar4) {
         this.alamat = alamat;
+        this.harga = harga;
         this.isi = isi;
         this.judul = judul;
         this.nilai = nilai;
@@ -25,6 +26,10 @@ public class ModelGedung {
     public void setAlamat(String alamat) {
         this.alamat = alamat;
     }
+
+    public String getHarga() { return harga; }
+
+    public void setHarga(String harga) { this.harga = harga; }
 
     public String getIsi() {
         return isi;

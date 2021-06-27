@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".gedung.review"/>
+        <activity android:name=".pesan_gedung"></activity>
+        <activity android:name=".navigation" />
+        <activity android:name=".home.row_data_event" />
+        <activity android:name=".detail.row_data_ulasan" />
+        <activity android:name=".detail.review" />
         <activity android:name=".gedung.gedung" />
         <activity android:name=".gedung.row_data_recycler" />
         <activity android:name=".Search_Gedung" />

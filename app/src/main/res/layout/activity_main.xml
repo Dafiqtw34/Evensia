@@ -61,7 +61,7 @@
             android:drawableStart="@drawable/user"
             android:drawablePadding="10dp"
             android:hint="Name"
-            android:inputType="textEmailAddress"
+            android:inputType="textPersonName"
             android:paddingStart="10dp" />
 
         <TextView

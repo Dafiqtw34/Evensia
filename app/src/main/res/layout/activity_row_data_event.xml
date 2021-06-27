@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.row_data_event">
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/form">
+
+        <ImageView
+            android:id="@+id/gambar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_toEndOf="@+id/gambar"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/isi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:layout_below="@+id/judul"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:layout_toEndOf="@+id/gambar"
+            android:layout_marginStart="20dp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

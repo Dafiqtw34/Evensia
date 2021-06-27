@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#E9E9E9"
     android:orientation="vertical"
-    tools:context=".gedung.review">
+    tools:context=".detail.review">
 
     <RelativeLayout
         android:id="@+id/backG"
@@ -34,232 +34,259 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="680dp"
-        android:layout_below="@+id/backG">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:id="@+id/review"
-            android:layout_width="380dp"
-            android:layout_height="480dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/form">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/judul"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/gambar"
-                android:layout_width="350dp"
-                android:layout_height="230dp"
-                android:layout_below="@+id/judul"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:scaleType="fitXY"
-                tools:ignore="ContentDescription" />
-
-            <HorizontalScrollView
-                android:id="@+id/scGambar"
+            <RelativeLayout
+                android:id="@+id/review"
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:layout_below="@+id/judul"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="90dp"
-                android:layout_marginEnd="10dp"
-                android:scrollbars="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/gambar1"
-                        android:layout_width="130dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="10dp"
-                        android:scaleType="fitXY"
-                        tools:ignore="ContentDescription" />
-
-                    <ImageView
-                        android:id="@+id/gambar2"
-                        android:layout_width="130dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="10dp"
-                        android:scaleType="fitXY"
-                        tools:ignore="ContentDescription" />
-
-                    <ImageView
-                        android:id="@+id/gambar3"
-                        android:layout_width="130dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="10dp"
-                        android:scaleType="fitXY"
-                        tools:ignore="ContentDescription" />
-
-                    <ImageView
-                        android:id="@+id/gambar4"
-                        android:layout_width="130dp"
-                        android:layout_height="120dp"
-                        android:scaleType="fitXY"
-                        tools:ignore="ContentDescription" />
-
-                </LinearLayout>
-
-            </HorizontalScrollView>
-
-            <TextView
-                android:id="@+id/alamat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/gambar"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/Gray"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/harga"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/gambar"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="20dp"
-                android:textColor="@color/black"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <view
-                android:id="@+id/garis"
-                android:layout_width="350dp"
-                android:layout_height="2dp"
-                android:layout_below="@+id/alamat"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp" />
-
-            <TextView
-                android:id="@+id/Textchat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/garis"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/Gray"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/chat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/garis"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="20dp" />
-
-            <TextView
-                android:id="@+id/luas1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/Textchat"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/Gray"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/luas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/chat"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="20dp"
-                android:textColor="@color/Gray"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/kap"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/luas1"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/Gray"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/kapasitas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/luas"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="20dp"
-                android:textColor="@color/Gray"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/sewa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/kap"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/Gray"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/jam"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/kapasitas"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="20dp"
-                android:textColor="@color/Gray"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/dok"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_below="@+id/sewa"
+                android:layout_height="480dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/ic_baseline_description_24" />
+                android:background="@drawable/form">
 
-            <TextView
-                android:id="@+id/ketentuan"
+                <TextView
+                    android:id="@+id/judul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/scGambar"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:layout_below="@+id/judul"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:scrollbars="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/gambar1"
+                            android:layout_width="360dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:scaleType="fitXY"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/gambar2"
+                            android:layout_width="360dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:scaleType="fitXY"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/gambar3"
+                            android:layout_width="360dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:scaleType="fitXY"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/gambar4"
+                            android:layout_width="360dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/scGambar"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/Gray"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/scGambar"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+<!--                <view-->
+<!--                    android:id="@+id/garis"-->
+<!--                    android:layout_width="350dp"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:layout_below="@+id/alamat"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_marginTop="5dp" />-->
+
+                <TextView
+                    android:id="@+id/Textchat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/harga"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/Gray"
+                    android:text="Chat"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/harga"
+                    android:src="@drawable/chat"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp" />
+
+                <TextView
+                    android:id="@+id/luas1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Textchat"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/Gray"
+                    android:text="Luas"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/isi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chat"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/Gray"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/kap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/luas1"
+                    android:layout_marginStart="10dp"
+                    android:text="Kapasitas"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/Gray"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nilai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/isi"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/Gray"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sewa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/kap"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Jam Sewa"
+                    android:textColor="@color/Gray"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/jam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nilai"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/Gray"
+                    android:text="12 Jam"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ketentuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sewa"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="25dp"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_baseline_description_24"
+                    android:text="Baca Ketentuan"
+                    android:textColor="@color/Gray"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textUlasan"
+                    android:text="Ulasan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="20dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_below="@id/textUlasan"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/logoutButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/sewa"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="25dp"
-                android:layout_toEndOf="@+id/dok"
-                android:text="Baca Ketentuan"
-                android:textColor="@color/Gray"
-                android:textSize="18sp" />
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:text="Logout" />
 
-        </RelativeLayout>
-
+        </LinearLayout>
+            
     </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

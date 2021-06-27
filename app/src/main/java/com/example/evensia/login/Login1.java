@@ -14,8 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.evensia.R;
 import com.example.evensia.gedung.gedung;
-import com.example.evensia.gedung.review;
-import com.example.evensia.home.Home;
 import com.example.evensia.register.MainActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -59,12 +57,17 @@ public class Login1 extends AppCompatActivity {
                 fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
                     if (task.isSuccessful()){
                         Toast.makeText(Login1.this, "Berhasil", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), gedung.class));
-                        String getID = fAuth.getUid();
-                        SharedPreferences sharedPreferences = getSharedPreferences("SharedPrefLogin", Context.MODE_PRIVATE);
+
+                        String getCurrentUser = fAuth.getCurrentUser().getUid();
+
+                        SharedPreferences sharedPreferences = getSharedPreferences("AuthLogin", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putString("Id_user", getID);
+                        editor.putString("token", getCurrentUser);
                         editor.apply();
+
+                        Intent moveGedung = new Intent(Login1.this, gedung.class);
+                        startActivity(moveGedung);
+                        finish();
                     }else {
                         Toast.makeText(Login1.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
@@ -73,7 +76,10 @@ public class Login1 extends AppCompatActivity {
         });
 
         
-        pindahactivity2.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
+        pindahactivity2.setOnClickListener(view -> {
+            Intent moveMain = new Intent(Login1.this, MainActivity.class);
+            startActivity(moveMain);
+        });
     }
 
     private void checkAuth() {
