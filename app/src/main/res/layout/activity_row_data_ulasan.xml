@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".detail.row_data_ulasan">
+    tools:context=".gedung.detail.row_data_ulasan">
 
     <RelativeLayout
         android:id="@+id/parent"
@@ -16,14 +16,29 @@
         android:layout_marginEnd="10dp"
         android:background="@drawable/form">
 
-        <ImageView
+        <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/profile"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:scaleType="fitXY"
-            tools:ignore="ContentDescription" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="2dp"
+            app:civ_shadow="true"
+            app:civ_shadow_color="#8BC34A"
+            app:civ_shadow_radius="5" />
+<!--        <ImageView-->
+<!--            android:id="@+id/profile"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:scaleType="fitXY"-->
+<!--            app:civ_border_width="6dp"-->
+<!--            app:civ_shadow="true"-->
+<!--            app:civ_shadow_color="#8BC34A"-->
+<!--            app:civ_shadow_radius="10"-->
+<!--            tools:ignore="ContentDescription" />-->
 
         <TextView
             android:id="@+id/nama"
@@ -33,7 +48,7 @@
             android:textSize="12sp"
             android:layout_toEndOf="@+id/profile"
             android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"/>
+            android:layout_marginStart="10dp"/>
 
         <TextView
             android:id="@+id/ulasan"
@@ -44,7 +59,7 @@
             android:layout_marginTop="5dp"
             android:textSize="12sp"
             android:layout_toEndOf="@+id/profile"
-            android:layout_marginStart="20dp"/>
+            android:layout_marginStart="10dp"/>
 
 
     </RelativeLayout>

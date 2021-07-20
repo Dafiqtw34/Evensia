@@ -3,23 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".home.row_data_event">
 
     <RelativeLayout
         android:id="@+id/parent"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="115dp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:background="@drawable/form">
+        android:background="@drawable/form"
+        android:layout_marginBottom="10dp">
 
         <ImageView
             android:id="@+id/gambar"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:scaleType="fitXY"
@@ -32,6 +33,7 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             android:layout_toEndOf="@+id/gambar"
+            android:textStyle="bold"
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"/>
 
@@ -39,9 +41,10 @@
             android:id="@+id/isi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/grey"
+            android:textColor="@color/black"
             android:layout_below="@+id/judul"
             android:layout_marginTop="5dp"
+            android:justificationMode="inter_word"
             android:textSize="12sp"
             android:layout_toEndOf="@+id/gambar"
             android:layout_marginStart="20dp"/>

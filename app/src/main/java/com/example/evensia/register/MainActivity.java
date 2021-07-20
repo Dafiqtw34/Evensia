@@ -1,5 +1,6 @@
 package com.example.evensia.register;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.evensia.R;
+import com.example.evensia.home.Home;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -34,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         mPassword = findViewById(R.id.pass);
         mCeklis = findViewById(R.id.syarat);
         pindahactivity = findViewById(R.id.reg);
+
+
 
         pindahactivity.setOnClickListener(view -> {
             String email = mEmail.getText().toString().trim();
@@ -79,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
             if (task.isSuccessful()) {
                 Toast.makeText(MainActivity.this, "Berhasil", Toast.LENGTH_SHORT).show();
                 FirebaseAuth.getInstance().signOut();
+//                startActivity(new Intent(getApplicationContext(), Home.class));
             } else {
                 Toast.makeText(MainActivity.this, "Gagal", Toast.LENGTH_SHORT).show();
             }

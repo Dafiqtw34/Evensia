@@ -1,30 +1,23 @@
-package com.example.evensia.detail;
+package com.example.evensia.gedung.detail;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.evensia.R;
-import com.example.evensia.detail.model.ModelUlasan;
-import com.example.evensia.gedung.gedung;
+import com.example.evensia.gedung.detail.model.ModelUlasan;
 import com.example.evensia.gedung.model.ModelGedung;
-import com.example.evensia.gedung.row_data_recycler;
-import com.example.evensia.home.Home;
-import com.example.evensia.login.Login1;
-import com.example.evensia.pesan_gedung;
+import com.example.evensia.gedung.pesanan.pesan_gedung;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;

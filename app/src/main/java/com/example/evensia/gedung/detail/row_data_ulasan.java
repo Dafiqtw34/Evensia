@@ -1,4 +1,4 @@
-package com.example.evensia.detail;
+package com.example.evensia.gedung.detail;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.evensia.R;
-import com.example.evensia.detail.model.ModelUlasan;
+import com.example.evensia.gedung.detail.model.ModelUlasan;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.evensia.detail.model;
+package com.example.evensia.gedung.detail.model;
 
 public class ModelUlasan {
     private String profile, nama, ulasan;

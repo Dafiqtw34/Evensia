@@ -54,15 +54,20 @@
             android:textColor="#fff"
             android:textSize="16sp" />
 
-        <Button
-            android:id="@+id/DG"
+        <com.google.android.gms.common.SignInButton
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/form"
-            android:drawableStart="@drawable/google"
-            android:paddingStart="20dp"
-            android:text="Masuk dengan akun Google" />
+            android:id="@+id/sign_in_button" />
+
+<!--        <Button-->
+<!--            android:id="@+id/DG"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/form"-->
+<!--            android:drawableStart="@drawable/google"-->
+<!--            android:paddingStart="20dp"-->
+<!--            android:text="Masuk dengan akun Google" />-->
 
         <TextView
             android:id="@+id/or"
@@ -113,6 +118,7 @@
             android:drawableStart="@drawable/ic_baseline_lock_24"
             android:drawableEnd="@drawable/ic_baseline_remove_red_eye_24"
             android:hint="Password"
+            android:drawablePadding="10dp"
             android:inputType="textPassword"
             android:paddingStart="10dp"
             android:paddingEnd="10dp" />
@@ -136,16 +142,45 @@
             android:text="Login"
             android:textColor="#fff" />
 
-        <TextView
-            android:id="@+id/bl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="9dp"
-            android:text="Belum punya akun? Login Disini"
-            android:textColor="#fff"
-            android:textSize="16sp" />
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progressBar"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            style="?android:attr/progressBarStyle"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:visibility="invisible"/>-->
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tanya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="9dp"
+                android:text="Belum punya akun?"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/bl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/tanya"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="9dp"
+                android:text="Register Disini"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 </RelativeLayout>

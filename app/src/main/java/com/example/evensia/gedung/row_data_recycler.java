@@ -15,10 +15,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.evensia.R;
-import com.example.evensia.detail.model.ModelUlasan;
-import com.example.evensia.detail.review;
+import com.example.evensia.gedung.detail.review;
 import com.example.evensia.gedung.model.ModelGedung;
-import com.example.evensia.home.Home;
 
 import java.util.List;
 
@@ -49,11 +47,18 @@ public class row_data_recycler extends RecyclerView.Adapter<row_data_recycler.Vi
         holder.harga.setText(modelGedung.getHarga());
         holder.nilai.setText(modelGedung.getNilai());
 
-        // fungsi untuk melempar id
+//         fungsi untuk melempar id
+        holder.parent.setOnClickListener(view -> {
+            Intent lemparId = new Intent(context, review.class);
+            lemparId.putExtra("sendID", modelGedung.getId());
+            context.startActivity(lemparId);
+        });
+
+
 //        holder.parent.setOnClickListener(view -> {
-//            Intent lemparJudul = new Intent(context, review.class);
-//            lemparJudul.putExtra("sendJudul", modelGedung.getJudul());
-//            context.startActivity(lemparJudul);
+//            Intent lemparId = new Intent(context, pesan_gedung.class);
+//            lemparId.putExtra("sendID", modelGedung.getId());
+//            context.startActivity(lemparId);
 //        });
 //        holder.parent.setOnClickListener(view -> {
 //            Intent lemparAlamat = new Intent(context, review.class);

@@ -12,11 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.evensia.R;
-import com.example.evensia.detail.review;
 import com.example.evensia.gedung.model.ModelGedung;
-import com.example.evensia.home.Home;
 import com.example.evensia.login.Login1;
-import com.example.evensia.pesan_gedung;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -29,7 +26,7 @@ public class gedung extends AppCompatActivity {
     private FirebaseFirestore firebaseFirestore;
     private FirebaseAuth firebaseAuth;
     private List<ModelGedung> modelGedungList;
-    private Button logoutButton;
+//    private Button logoutButton;
     private ImageView buttonBack;
 
     @Override
@@ -48,32 +45,25 @@ public class gedung extends AppCompatActivity {
 
     private void setID() {
         recyclerView = findViewById(R.id.recyclerView);
-        logoutButton = findViewById(R.id.logoutButton);
+//        logoutButton = findViewById(R.id.logoutButton);
         buttonBack = findViewById(R.id.back);
     }
 
     private void onClickMethod() {
-        logoutButton.setOnClickListener(view -> {
-            FirebaseAuth.getInstance().signOut();
-
-            SharedPreferences preferences = getSharedPreferences("AuthLogin", Context.MODE_PRIVATE);
-            preferences.edit().clear().apply();
-
-            Intent moveLogin = new Intent(gedung.this, Login1.class);
-            startActivity(moveLogin);
-            finish();
-
-        });
+//        logoutButton.setOnClickListener(view -> {
+//            FirebaseAuth.getInstance().signOut();
+//
+//            SharedPreferences preferences = getSharedPreferences("AuthLogin", Context.MODE_PRIVATE);
+//            preferences.edit().clear().apply();
+//
+//            Intent moveLogin = new Intent(gedung.this, Login1.class);
+//            startActivity(moveLogin);
+//            finish();
+//
+//        });
 
         buttonBack.setOnClickListener(view -> {
-            FirebaseAuth.getInstance().signOut();
-
-            SharedPreferences preferences = getSharedPreferences("SharedPrefLogin", Context.MODE_PRIVATE);
-            preferences.edit().clear().apply();
-
-            Intent moveHome = new Intent(gedung.this, pesan_gedung.class);
-            startActivity(moveHome);
-            finish();
+            onBackPressed();
         });
     }
 
