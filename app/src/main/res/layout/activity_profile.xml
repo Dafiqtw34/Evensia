@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.Profile">
+
+    <RelativeLayout
+        android:id="@+id/backG"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#272643">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Profile"
+            android:textColor="#fff"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/profile"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="150dp">-->
+
+    <!--    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/backG"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/image_profile"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/upload_picture"/>
+
+        <Button
+            android:id="@+id/riwayatpemesanan"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/image_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/form"
+            android:drawableLeft="@drawable/history_pemesanan"
+            android:paddingStart="10dp"
+            android:text="History Pemesanan" />
+
+        <Button
+            android:id="@+id/vocher"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/riwayatpemesanan"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/form"
+            android:drawableLeft="@drawable/vocher"
+            android:paddingStart="10dp"
+            android:text="Vocher" />
+
+        <Button
+            android:id="@+id/riwayattransaksi"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/vocher"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/form"
+            android:drawableLeft="@drawable/riwayat_transaksi"
+            android:paddingStart="10dp"
+            android:text="Riwayat Transaksi" />
+
+        <Button
+            android:id="@+id/verivikasigopay"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/riwayattransaksi"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/form"
+            android:drawableLeft="@drawable/verivikasi_gopay"
+            android:paddingStart="10dp"
+            android:text="Verivikasi Go-pay" />
+
+        <Button
+            android:id="@+id/bantuanlainnya"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/verivikasigopay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/form"
+            android:drawableLeft="@drawable/bantuan_lainnya"
+            android:paddingStart="10dp"
+            android:text="Bantuan Lainnya" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/bantuanlainnya"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/form"
+            android:drawableLeft="@drawable/logout"
+            android:paddingStart="10dp"
+            android:text="Logout" />
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/navbar"
+        app:itemIconTint="@drawable/color_state"
+        app:itemTextColor="@drawable/color_state"
+        app:menu="@menu/button_navigation">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>
