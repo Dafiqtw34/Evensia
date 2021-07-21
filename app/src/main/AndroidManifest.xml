@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.evensia">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:allowBackup="true"
@@ -16,14 +24,10 @@
         <activity android:name=".profile.Profile" />
         <activity android:name=".booking.Booking" />
         <activity android:name=".gedung.pesanan.pesan_gedung" />
-        <activity android:name=".navigation" />
         <activity android:name=".home.row_data_event" />
         <activity android:name=".gedung.detail.row_data_ulasan" />
         <activity android:name=".gedung.detail.review" />
-        <activity android:name=".gedung.gedung" />
         <activity android:name=".gedung.row_data_recycler" />
-        <activity android:name=".Search_Gedung" />
-        <activity android:name=".otp" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

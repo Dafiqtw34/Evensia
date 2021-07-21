@@ -11,9 +11,34 @@
     </View>
 
     <ImageView
-        android:id="@+id/slider"
+        android:id="@+id/slider1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:src="@drawable/event1"/>
+    <ImageView
+        android:id="@+id/slider2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/event2"/>
+    <ImageView
+        android:id="@+id/slider3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/event3"/>
+    <ImageView
+        android:id="@+id/slider4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/event1"/>
+    <ImageView
+        android:id="@+id/slider5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/event1"/>
 
 </RelativeLayout>

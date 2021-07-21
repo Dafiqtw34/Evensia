@@ -78,7 +78,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void insertToDatabase(String name, String phoneNumber, FirebaseAuth fAuth, FirebaseFirestore firebaseFirestore) {
         String getUserID = Objects.requireNonNull(fAuth.getCurrentUser()).getUid();
-        ModelRegister modelRegister = new ModelRegister(name, phoneNumber);
+        ModelRegister modelRegister = new ModelRegister();
+        modelRegister.setName(name);
+        modelRegister.setPhone(phoneNumber);
+        modelRegister.setProfile("");
         firebaseFirestore.collection("Users").document(getUserID).set(modelRegister).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 Toast.makeText(MainActivity.this, "Berhasil", Toast.LENGTH_SHORT).show();

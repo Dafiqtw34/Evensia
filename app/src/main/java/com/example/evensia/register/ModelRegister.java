@@ -1,11 +1,10 @@
 package com.example.evensia.register;
 
 public class ModelRegister {
-    private String name, phone;
+    private String name, phone, profile;
 
-    public ModelRegister(String name, String phone) {
-        this.name = name;
-        this.phone = phone;
+    public ModelRegister() {
+
     }
 
     public String getName() {
@@ -23,4 +22,8 @@ public class ModelRegister {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+    public String getProfile() { return profile; }
+
+    public void setProfile(String profile) { this.profile = profile; }
 }

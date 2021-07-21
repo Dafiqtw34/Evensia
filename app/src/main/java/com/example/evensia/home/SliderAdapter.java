@@ -29,7 +29,11 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.MyViewHold
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.view.setBackgroundColor(list[position]);
-        holder.slider.setImageResource(R.drawable.event1);
+        holder.slider1.setImageResource(R.drawable.event1);
+        holder.slider2.setImageResource(R.drawable.event2);
+        holder.slider3.setImageResource(R.drawable.event3);
+        holder.slider4.setImageResource(R.drawable.event1);
+        holder.slider5.setImageResource(R.drawable.event1);
     }
 
     @Override
@@ -39,12 +43,16 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.MyViewHold
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         View view;
-        ImageView slider;
+        ImageView slider1, slider2, slider3, slider4, slider5;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             view = itemView.findViewById(R.id.view);
-            slider = itemView.findViewById(R.id.slider);
+            slider1 = itemView.findViewById(R.id.slider1);
+            slider2 = itemView.findViewById(R.id.slider2);
+            slider3 = itemView.findViewById(R.id.slider3);
+            slider4 = itemView.findViewById(R.id.slider4);
+            slider5 = itemView.findViewById(R.id.slider5);
         }
     }
 

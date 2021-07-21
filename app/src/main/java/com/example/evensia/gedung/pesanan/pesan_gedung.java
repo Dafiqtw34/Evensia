@@ -175,7 +175,7 @@ public class pesan_gedung extends AppCompatActivity {
 
                         bayar.setOnClickListener(view -> {
                             AlertDialog.Builder builder1 = new AlertDialog.Builder(pesan_gedung.this);
-                            builder1.setMessage("Apakah anda yakin data ");
+                            builder1.setMessage("Apa data anda sudah sesuai? ");
                             builder1.setCancelable(false);
 
                             builder1.setPositiveButton("Yes", (dialog, id) -> {

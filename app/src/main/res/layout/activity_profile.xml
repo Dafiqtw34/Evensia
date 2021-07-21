@@ -36,7 +36,7 @@
         android:layout_below="@+id/backG"
         android:layout_marginBottom="20dp">
 
-        <ImageView
+        <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/image_profile"
             android:layout_width="90dp"
             android:layout_height="90dp"
